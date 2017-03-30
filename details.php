@@ -26,7 +26,8 @@ while ($line = fgets($fh)) {
        echo '<br>';
 }
 fclose($fh);
-
+$file = 'bulk_modulus-temperature.pdf'
+echo '<img src="', $dbpath, '/', $file, '" alt="', $file, '" />';
 
 ?>
 
