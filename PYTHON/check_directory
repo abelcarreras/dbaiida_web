@@ -1,0 +1,16 @@
+import sys
+sys.path.append("/home/abel/software/aiida_core")
+
+# AiiDA imports
+from aiida import load_dbenv
+load_dbenv()
+#from aiida.orm import Code, DataFactory
+#from aiida.orm.calculation.job.vasp import vasp as vplugin
+
+from aiida.orm import load_node, load_workflow
+
+
+#print sys.argv[1]
+n=load_node(int(sys.argv[1]))
+print n.get_retrieved_node().get_abs_path()
+
